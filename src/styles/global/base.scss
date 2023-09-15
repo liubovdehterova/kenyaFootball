@@ -1,0 +1,32 @@
+@import "../_variables/variables";
+
+body {
+  background-color: #f4f4f4;
+  font-family: $ui-font-main;
+  font-size: $ui-font-main-size;
+  color: $ui-main-color;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: $ui-font-title;
+  margin: 1em 0;
+}
+p {
+  margin-bottom: $ui-margin-bottom-paragraph;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+ol {
+  list-style-type: decimal;
+  padding-left: 40px;
+  li {
+    font-family: sans-serif;
+    margin-bottom: 0.5rem;
+  }
+}

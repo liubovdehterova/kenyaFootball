@@ -1,0 +1,27 @@
+@import "../_variables/variables";
+@import "../_mixin/mixins";
+
+.main {
+  padding-top: 3.5em;
+  .container {
+    box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.14);
+  }
+}
+.cards {
+  padding: 30px;
+  &__title {
+    font-size: 26px;
+    margin-bottom: 0.5em;
+    line-height: 1.25;
+  }
+  &__content {
+    p {
+      color: $ui-accent-color;
+    }
+  }
+  a {
+    color: $ui-accent-color;
+    text-decoration: $ui-text-decoration;
+  }
+}
+@import "cardMain";

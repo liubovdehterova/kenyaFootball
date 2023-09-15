@@ -1,0 +1,21 @@
+@import "../_variables/variables";
+
+@media (max-width: $layout-breakpoint-xl) {
+  .main {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: $layout-breakpoint-l) {
+  .card__logo {
+    width: 35%;
+  }
+}
+@media (max-width: $layout-breakpoint-s) {
+  .card {
+    flex-direction: column;
+  }
+  .card__logo {
+    width: 100%;
+  }
+}

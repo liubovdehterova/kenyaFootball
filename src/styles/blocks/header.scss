@@ -1,0 +1,140 @@
+@import "../_variables/variables";
+@import "../_mixin/mixins";
+
+.header {
+  border-bottom: 3px solid $ui-accent-color;
+
+  &__top {
+    padding: 35px 0;
+    border-bottom: 1px solid #eee;
+    position: relative;
+
+    &__title {
+      display: $ui-block;
+      color: $ui-accent-color;
+      text-transform: uppercase;
+      font-size: 2.3em;
+      text-align: $ui-text-center;
+    }
+  }
+}
+
+.navigation {
+  &__list {
+    padding: 15px 0;
+    @include flex-between;
+    justify-content: space-around;
+
+    &__item {
+      position: relative;
+      margin-left: 1.6rem;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:hover {
+        .navigation__list__item__link {
+          color: $ui-accent-color;
+        }
+
+        .submenu {
+          display: block;
+          position: absolute;
+          bottom: 0;
+          top: 100%;
+          padding-top: 20px;
+        }
+      }
+
+      &__link {
+        position: relative;
+        margin-left: 1.6rem;
+        display: $ui-block;
+        color: $ui-nav-color;
+        padding-right: 20px;
+
+        &:after {
+          @include after-before;
+          top: 6px;
+          right: 0;
+          background: url("../images/arrow-bottom2-svgrepo-com.webp") $ui-background-repeat;
+          background-size: $ui-background-size-contain;
+          margin-left: 5px;
+          width: 15px;
+          height: 10px;
+        }
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.submenu {
+  display: none;
+  width: 200px;
+
+  &__item {
+    display: $ui-block;
+    background: $ui-accent-color;
+
+    &:hover {
+      background: $ui-nav-color;
+    }
+
+    &__link {
+      display: $ui-block;
+      padding: 10px 15px;
+      color: $ui-submenu-color;
+    }
+  }
+}
+
+.navigation__list__item-cls {
+  background: $ui-accent-color;
+  text-align: $ui-text-center;
+  display: none;
+
+  .close_nav {
+    background: none;
+    border: none;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.menu-toggle {
+  display: none;
+  border: none;
+  cursor: pointer;
+  width: 45px;
+  height: 35px;
+  padding: 0;
+  text-align: center;
+  position: absolute;
+  top: 35px;
+  right: 15px;
+  background: #066b27;
+  border-radius: 5px;
+  z-index: 1;
+
+  .line {
+    width: 27px;
+    height: 3px;
+    background-color: #fff;
+    display: block;
+    transition: all 300ms ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}

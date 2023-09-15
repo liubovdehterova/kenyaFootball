@@ -1,0 +1,27 @@
+.card {
+  @include flex-between;
+  box-shadow: 0 16px 32px 0 rgb(0 40 120 / 35%);
+  border-radius: 20px;
+  margin: 0 0 20px;
+  &--pad {
+    padding: 10px;
+  }
+  &__logo {
+    width: 60%;
+    text-align: $ui-text-center;
+  }
+  &__link {
+    &__rev {
+      color: $ui-accent-color;
+      text-decoration: $ui-text-decoration;
+    }
+  }
+  &__btn {
+    @include btn;
+    font-size: 15px;
+    .card__btn__link {
+      color: $ui-submenu-color;
+      text-decoration: $ui-text-decoration;
+    }
+  }
+}

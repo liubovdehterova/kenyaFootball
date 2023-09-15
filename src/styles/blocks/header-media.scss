@@ -1,0 +1,60 @@
+@import "../_variables/variables";
+
+@media (max-width: $layout-breakpoint-xl) {
+  .menu-toggle {
+    display: block;
+  }
+  .navigation__list {
+    display: $ui-block;
+    height: 100%;
+    max-height: 110vh;
+    overflow-y: auto;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+    left: -100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 0;
+    padding-bottom: 10px;
+    transition: all 300ms ease-in-out;
+    &.active {
+      opacity: 1;
+      left: 0;
+      z-index: 3;
+    }
+    &__item {
+      width: 75%;
+      background: $ui-submenu-color;
+      margin-left: 0;
+      padding: 10px 15px;
+      &:hover {
+        .submenu {
+          display: block;
+          position: relative;
+          bottom: 0;
+          top: 100%;
+          padding-top: 20px;
+          width: 100%;
+        }
+      }
+      &-cls {
+        display: block;
+        background: $ui-accent-color;
+      }
+    }
+  }
+  .submenu__item {
+    border-bottom: 1px solid #f5f5f5;
+  }
+}
+
+@media (max-width: $layout-breakpoint-l) {
+  .header__top__title {
+    text-align: start;
+    font-size: 30px;
+  }
+  .header__top__title {
+    padding: 0 45px 0 0;
+  }
+}

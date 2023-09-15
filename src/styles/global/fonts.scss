@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Poppins-Bold';
+  src: url('../fonts/Poppins-Bold.ttf');
+  src: url('../fonts/Poppins-Bold.eot'),
+  url('../fonts/Poppins-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Poppins-Bold.woff2') format('woff2'),
+  url('../fonts/Poppins-Bold.woff') format('woff'),
+  url('../fonts/Poppins-Bold.svg#Poppins-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Muli';
+  src: url('../fonts/Muli.ttf');
+  src: url('../fonts/Muli.eot'),
+  url('../fonts/Muli.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Muli.woff2') format('woff2'),
+  url('../fonts/Muli.woff') format('woff'),
+  url('../fonts/Muli.svg#Poppins-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
